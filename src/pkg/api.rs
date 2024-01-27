@@ -1,13 +1,4 @@
-pub mod jwt;
-pub mod mailer;
-
 use serde::{Deserialize, Serialize};
-use sqlx::postgres::PgPool;
-
-#[derive(Clone)]
-pub struct AppState {
-    pub pool: PgPool,
-}
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
